@@ -1,18 +1,29 @@
+import com.google.gson.annotations.SerializedName;
+
 public class Transcript {
 
-
-    private String audio_url;
+    @SerializedName("audio_url")
+    private String audioUrl;
     private String id;
     private String status;
     private String text;
+    private Word[] words;
 
-
-    public String getAudio_url() {
-        return audio_url;
+    public Word[] getWords() {
+        return words;
     }
 
-    public void setAudio_url(String audio_url) {
-        this.audio_url = audio_url;
+    public void setWords(Word[] words) {
+        this.words = words;
+    }
+
+
+    public String getAudioUrl() {
+        return audioUrl;
+    }
+
+    public void setAudioUrl(String audioUrl) {
+        this.audioUrl = audioUrl;
     }
 
 
